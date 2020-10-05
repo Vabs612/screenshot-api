@@ -14,14 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.code.service.ScreenShotService;
 
-@RestController
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
+@RestController
+@Api
 public class ImageController {
 
 	@Autowired
 	ScreenShotService service;
 
-
+	@ApiOperation("get screenshot of webpage")
 	@GetMapping(value = "/api", produces = MediaType.IMAGE_PNG_VALUE)
 	public ResponseEntity<byte[]> getImageWithMediaType(@RequestParam("url") String url, HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
