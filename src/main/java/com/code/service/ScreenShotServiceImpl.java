@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.assertthat.selenium_shutterbug.core.Capture;
 import com.assertthat.selenium_shutterbug.core.Shutterbug;
+import com.code.exception.InvalidUrlException;
 import com.code.utils.DriverUtil;
 
 @Service
@@ -33,6 +34,7 @@ public class ScreenShotServiceImpl implements ScreenShotService {
 		} catch (WebDriverException e) {
 			// close the driver if exception occurs
 			DriverUtil.destroyDriver();
+			throw new InvalidUrlException("Invalid url: " + url);
 		}
 
 		byte[] bytes = null;
