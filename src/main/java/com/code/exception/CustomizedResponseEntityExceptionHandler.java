@@ -19,7 +19,7 @@ import com.code.utils.DriverUtil;
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
 	// Creating logger object
-	static Logger logger = LoggerFactory.getLogger(DriverUtil.class);
+	static Logger logger = LoggerFactory.getLogger(CustomizedResponseEntityExceptionHandler.class);
 	
 	//Handle all the exceptions response
 	@ExceptionHandler(Exception.class)
