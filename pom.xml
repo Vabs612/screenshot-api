@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.code</groupId>
-	<artifactId>screenshot-api</artifactId>
+	<artifactId>screenshot-api-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>screenshot-api</name>
 	<description>Java API that will take a screenshot of a webpage</description>
